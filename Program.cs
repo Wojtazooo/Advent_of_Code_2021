@@ -8,7 +8,12 @@ namespace Advent_of_Code_2021
     {
         public static void Main(string[] args)
         {
-            Day1.PrintOutput();
+            var days = new List<Day> { new Day1(), new Day2() };
+            foreach(var day in days)
+            {
+                Console.WriteLine("=====================================");
+                day.PrintOutput();
+            }
         }
     }
 }

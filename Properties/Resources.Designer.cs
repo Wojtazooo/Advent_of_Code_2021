@@ -170,5 +170,72 @@ namespace Advent_of_Code_2021.Properties {
                 return ResourceManager.GetString("DataDay1", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to forward 3
+        ///down 4
+        ///forward 3
+        ///up 4
+        ///down 4
+        ///down 6
+        ///down 3
+        ///down 1
+        ///up 7
+        ///down 7
+        ///forward 4
+        ///forward 7
+        ///forward 3
+        ///down 2
+        ///forward 5
+        ///down 7
+        ///forward 5
+        ///up 9
+        ///down 6
+        ///forward 8
+        ///forward 8
+        ///down 8
+        ///forward 7
+        ///down 9
+        ///down 4
+        ///down 6
+        ///forward 1
+        ///down 2
+        ///down 7
+        ///up 4
+        ///forward 8
+        ///down 5
+        ///down 7
+        ///down 1
+        ///forward 5
+        ///down 1
+        ///up 1
+        ///forward 5
+        ///forward 1
+        ///down 1
+        ///forward 3
+        ///up 4
+        ///up 4
+        ///up 8
+        ///up 1
+        ///forward 7
+        ///down 3
+        ///forward 3
+        ///forward 3
+        ///down 3
+        ///down 6
+        ///down 7
+        ///forward 4
+        ///down 2
+        ///up 3
+        ///forward 5
+        ///forward 1
+        ///down 3
+        ///up [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string DataDay2 {
+            get {
+                return ResourceManager.GetString("DataDay2", resourceCulture);
+            }
+        }
     }
 }

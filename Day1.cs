@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Advent_of_Code_2021
 {
-    public class Day1
+    public class Day1 : Day
     {
         public static int CountNumberOfIncreases(List<int> values)
         {
@@ -35,7 +35,7 @@ namespace Advent_of_Code_2021
             return numberOfIncreases;
         }
 
-        public static void PrintOutput()
+        public override void PrintOutput()
         {
             var data = Properties.Resources.DataDay1.Split('\n');
 
