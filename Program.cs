@@ -8,7 +8,7 @@ namespace Advent_of_Code_2021
     {
         public static void Main(string[] args)
         {
-            var days = new List<Day> { new Day1(), new Day2() };
+            var days = new List<Day> { new Day1(), new Day2(), new Day3() };
             foreach(var day in days)
             {
                 Console.WriteLine("=====================================");
