@@ -308,5 +308,58 @@ namespace Advent_of_Code_2021.Properties {
                 return ResourceManager.GetString("DataDay4", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 348,742 -&gt; 620,742
+        ///494,864 -&gt; 494,484
+        ///193,136 -&gt; 301,136
+        ///342,692 -&gt; 342,538
+        ///234,525 -&gt; 102,393
+        ///72,964 -&gt; 847,189
+        ///639,430 -&gt; 99,970
+        ///398,791 -&gt; 398,187
+        ///181,144 -&gt; 205,168
+        ///607,617 -&gt; 416,617
+        ///98,339 -&gt; 98,437
+        ///763,119 -&gt; 176,119
+        ///450,848 -&gt; 450,664
+        ///293,133 -&gt; 293,98
+        ///308,98 -&gt; 308,15
+        ///157,21 -&gt; 405,269
+        ///792,471 -&gt; 409,471
+        ///42,955 -&gt; 956,41
+        ///895,269 -&gt; 895,884
+        ///629,635 -&gt; 392,635
+        ///169,23 -&gt; 273,127
+        ///250,847 -&gt; 250,665
+        ///709,56 -&gt; 709,626
+        ///938,599 -&gt; 669,868
+        ///913,46 -&gt; 458,501
+        ///844,417 -&gt; 844,424
+        ///178,6 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string DataDay5 {
+            get {
+                return ResourceManager.GetString("DataDay5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0,9 -&gt; 5,9
+        ///8,0 -&gt; 0,8
+        ///9,4 -&gt; 3,4
+        ///2,2 -&gt; 2,1
+        ///7,0 -&gt; 7,4
+        ///6,4 -&gt; 2,0
+        ///0,9 -&gt; 2,9
+        ///3,4 -&gt; 1,4
+        ///0,0 -&gt; 8,8
+        ///5,5 -&gt; 8,2.
+        /// </summary>
+        internal static string SampleDataDay5 {
+            get {
+                return ResourceManager.GetString("SampleDataDay5", resourceCulture);
+            }
+        }
     }
 }
