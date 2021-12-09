@@ -363,6 +363,20 @@ namespace Advent_of_Code_2021.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to fdgcea dgefa efabdg fdgcba dab baefc begd ebdfa db bafgdce | gfbcda cgfadb badcefg eacfgd
+        ///eagfdb bafdec fdg edgca gf cdbafeg egfcdb bgaf aedfg defba | gfd edagcbf cdfebg gfedab
+        ///faecdgb edgf decag cgf agdcbf aefcb gf dgebca fdaceg cefga | fcg fcbae fg aecgd
+        ///abcgdfe gebfd eacbdf gc gbc cabdfg dcfab gdcfb gacd acfegb | fabdc cg bdfeg gbc
+        ///bgcda cagdf geafdc fbcdge fedag fc egcabdf gfc gfedba acfe | cdegaf dbfgea adefbg afedcbg
+        ///degfbc cdeg dcfbae debfc gbadecf begfca egb eg dbfge adgfb | egfdbc ecgfbd dbcag [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string DataDay8 {
+            get {
+                return ResourceManager.GetString("DataDay8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 0,9 -&gt; 5,9
         ///8,0 -&gt; 0,8
         ///9,4 -&gt; 3,4
