@@ -172,6 +172,19 @@ namespace Advent_of_Code_2021.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;[&lt;&lt;&lt;&lt;[{[&lt;({{({}&lt;&gt;)&lt;[]{}&gt;}[&lt;&lt;&gt;{}&gt;{&lt;&gt;{}}]}{(({}&lt;&gt;){()&lt;&gt;}){{[]&lt;&gt;}{[]}}})&gt;([{{(()[])[{}()]}}(&lt;{{}&lt;&gt;}
+        ///&lt;&lt;[&lt;&lt;{[&lt;&lt;&lt;{{&lt;(()[])&gt;[({}{})]}}({{({}())[&lt;&gt;{}]}}{{(&lt;&gt;&lt;&gt;)[&lt;&gt;()]}&lt;&lt;&lt;&gt;{}&gt;&lt;&lt;&gt;()&gt;&gt;})&gt;{[[&lt;(&lt;&gt;[])[[]{}]&gt;{{[]&lt;&gt;}&lt;[]
+        ///&lt;[{&lt;&lt;(&lt;([{&lt;[&lt;{()&lt;&gt;}&lt;{}[]&gt;&gt;([&lt;&gt;()]{&lt;&gt;()})]{[([][])&lt;{}&lt;&gt;&gt;][&lt;&lt;&gt;&lt;&gt;&gt;]}&gt;}][[[&lt;{{[]{}}[[][]]}([{}[]]&lt;[]&lt;&gt;
+        ///&lt;{[(&lt;&lt;[({([{&lt;[{}[]]{&lt;&gt;{}}&gt;}[(({}()){[]&lt;&gt;])]]{{&lt;&lt;[]&gt;([]&lt;&gt;)&gt;&lt;&lt;{}()&gt;{&lt;&gt;[]}&gt;}{({&lt;&gt;&lt;&gt;}&lt;&lt;&gt;{}&gt;){(()[])&lt;()&lt;&gt;&gt;}}})
+        ///[{&lt;{[(({[[&lt;&lt;&lt;&lt;&lt;&gt;()&gt;{(){}}&gt;[{[]{}}(&lt;&gt;&lt;&gt;)]&gt;{[&lt;[][]&gt;(()&lt;&gt;)]&lt;&lt;[]()&gt;&lt;()()&gt;&gt;}&gt;])}(&lt;{&lt;[&lt;&lt;{}[]&gt;&gt;{[()[]]({} [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string DataDay10 {
+            get {
+                return ResourceManager.GetString("DataDay10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to forward 3
         ///down 4
         ///forward 3

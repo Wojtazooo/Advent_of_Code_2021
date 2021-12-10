@@ -23,8 +23,8 @@ namespace Advent_of_Code_2021
 
             ReadData(out map, Properties.Resources.SampleDataDay9);
             Console.WriteLine("SampleData");
-            Console.WriteLine($"Day 8 - part one: {GetResultPartOne(map)}");
-            Console.WriteLine($"Day 8 - part two: {GetResultPartTwo(map, out entered, out isMin)}");
+            Console.WriteLine($"Day 9 - part one: {GetResultPartOne(map)}");
+            Console.WriteLine($"Day 9 - part two: {GetResultPartTwo(map, out entered, out isMin)}");
             DrawBoard(map, entered, isMin);
         }
 
@@ -36,8 +36,8 @@ namespace Advent_of_Code_2021
 
             ReadData(out map, Properties.Resources.DataDay9);
             Console.WriteLine("OfficialData");
-            Console.WriteLine($"Day 8 - part one: {GetResultPartOne(map)}");
-            Console.WriteLine($"Day 8 - part two: {GetResultPartTwo(map, out entered, out isMin)}");
+            Console.WriteLine($"Day 9 - part one: {GetResultPartOne(map)}");
+            Console.WriteLine($"Day 9 - part two: {GetResultPartTwo(map, out entered, out isMin)}");
             //DrawBoard(map, entered, isMin);
         }
 
