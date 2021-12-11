@@ -1,24 +1,16 @@
-﻿using System.ComponentModel.Design;
-using System.Data;
-using System.Net;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography;
-using System.Security.Cryptography.X509Certificates;
-using System.Text.Json.Serialization;
-using System.Xml.Schema;
-
-namespace Advent_of_Code_2021
+﻿namespace Advent_of_Code_2021
 {
     public class Day11 : Day
     {
         public class DumboOctopusesBoard
         {
             public int[,] Board;
-            public int flashes = 0;
+            public int Flashes;
 
             public DumboOctopusesBoard(int[,] board)
             {
                 Board = board;
+                Flashes = 0;
             }
 
             public void DrawBoard()
@@ -26,10 +18,10 @@ namespace Advent_of_Code_2021
                 Console.Write(' ');
                 Console.Write(new string('=',Board.GetLength(0)+2));
                 Console.Write('\n');
-                for (int i = 0; i < Board.GetLength(0); i++)
+                for (var i = 0; i < Board.GetLength(0); i++)
                 {
                     Console.Write(" |");
-                    for (int j = 0; j < Board.GetLength(1); j++)
+                    for (var j = 0; j < Board.GetLength(1); j++)
                     {
                         if (Board[i, j] == 0)
                         {
@@ -58,7 +50,7 @@ namespace Advent_of_Code_2021
                     {
                         Console.WriteLine($"Result after {n} days");
                         DrawBoard();
-                        Console.WriteLine($"Flashes = {flashes}");
+                        Console.WriteLine($"Flashes = {Flashes}");
                     }
 
                     if (allFlashed)
@@ -84,7 +76,7 @@ namespace Advent_of_Code_2021
                         if (Board[i, j] > 9)
                         {
                             Board[i, j] = 0;
-                            flashes++;
+                            Flashes++;
                             flashesFrom.Push((i, j));
                             considered[i, j] = true;
                         }
@@ -120,7 +112,7 @@ namespace Advent_of_Code_2021
                 {
                     considered[x, y] = true;
                     Board[x, y] = 0;
-                    flashes++;
+                    Flashes++;
                     flashesFrom.Push((x, y));
                 }
             }
