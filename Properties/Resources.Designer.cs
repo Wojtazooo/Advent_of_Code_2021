@@ -185,6 +185,24 @@ namespace Advent_of_Code_2021.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 4472562264
+        ///8631517827
+        ///7232144146
+        ///2447163824
+        ///1235272671
+        ///5133527146
+        ///6511372417
+        ///3841841614
+        ///8621368782
+        ///3246336677.
+        /// </summary>
+        internal static string DataDay11 {
+            get {
+                return ResourceManager.GetString("DataDay11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to forward 3
         ///down 4
         ///forward 3

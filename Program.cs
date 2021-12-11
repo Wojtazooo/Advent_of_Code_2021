@@ -20,6 +20,7 @@ namespace Advent_of_Code_2021
                 new Day8(),
                 new Day9(),
                 new Day10(),
+                new Day11(),
             };
             foreach (var day in days)
             {
