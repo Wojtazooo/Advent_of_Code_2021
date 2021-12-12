@@ -203,6 +203,39 @@ namespace Advent_of_Code_2021.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to YW-end
+        ///DK-la
+        ///la-XG
+        ///end-gy
+        ///zq-ci
+        ///XG-gz
+        ///TF-la
+        ///xm-la
+        ///gy-gz
+        ///ci-start
+        ///YW-ci
+        ///TF-zq
+        ///ci-DK
+        ///la-TS
+        ///zq-YW
+        ///gz-YW
+        ///zq-gz
+        ///end-gz
+        ///ci-TF
+        ///DK-zq
+        ///gy-YW
+        ///start-DK
+        ///gz-DK
+        ///zq-la
+        ///start-TF.
+        /// </summary>
+        internal static string DataDay12 {
+            get {
+                return ResourceManager.GetString("DataDay12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to forward 3
         ///down 4
         ///forward 3
