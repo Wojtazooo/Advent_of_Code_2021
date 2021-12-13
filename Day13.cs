@@ -10,33 +10,12 @@ namespace Advent_of_Code_2021
         public const string XFoldCommand = "fold along x=";
         public const string YFoldCommand = "fold along y=";
 
-        public const string data = @"6,10
-0,14
-9,10
-0,3
-10,4
-4,11
-6,0
-6,12
-4,1
-0,13
-10,12
-3,4
-3,0
-8,4
-1,10
-2,14
-8,10
-9,0
-
-fold along y=7
-fold along x=5";
-
         public class BoardToFold
         {
             public bool[,] board;
             public int height => board.GetLength(1);
             public int width => board.GetLength(0);
+
 
             public BoardToFold(List<(int x, int y)> points)
             {
@@ -49,7 +28,7 @@ fold along x=5";
                 }
             }
 
-            public void DrawBoard()
+            public void DrawBoard(bool drawFold, bool xFold, int whereFold)
             {
                 Console.WriteLine(new string('=', width + 2));
                 for(int y = 0; y < height; y++)
@@ -57,39 +36,117 @@ fold along x=5";
                     Console.Write("|");
                     for(int x = 0; x < width; x++)
                     {
-                        Console.Write(board[x, y] ? "#" : "-");
+                        if (!drawFold)
+                        {
+                            Console.Write(board[x, y] ? "#" : " ");
+                        }
+                        else
+                        {
+                            if (xFold && whereFold == x)
+                            {
+                                ConsoleExtensions.ColorConsoleWrite("|", ConsoleColor.Red);
+                            }
+                            else if (!xFold && whereFold == y)
+                            {
+                                ConsoleExtensions.ColorConsoleWrite("-", ConsoleColor.Red);
+                            }
+                            else
+                            {
+                                Console.Write(board[x, y] ? "#" : " ");
+                            }
+                        }
+                       
                     }
                     Console.Write("|\n");
                 }
+                Console.WriteLine(new string('=', width + 2));
             }
 
-            public void Fold(bool FoldByX, int value)
+            public void Fold(bool foldByX, int whereFold)
             {
                 bool[,] foldedBoard;
-                if (FoldByX)
+                if (foldByX)
                 {
-                    foldedBoard = new bool[width, value];
-
+                    foldedBoard = new bool[whereFold, height];
+                    for (int x = 0; x < width; x++)
+                    {
+                        for (int y = 0; y < height; y++)
+                        {
+                            if (x < whereFold) 
+                            {
+                                foldedBoard[x, y] = board[x, y];
+                            }
+                            else if(x > whereFold && board[x, y]) 
+                            {
+                                int d = x - whereFold;
+                                foldedBoard[x - 2 * d, y] = true;
+                            }
+                        }
+                    }
                 }
-                else // foldByY
+                else 
                 {
-                    foldedBoard = new bool[width, value];
-
+                    foldedBoard = new bool[width, whereFold];
+                    for (int x = 0; x < width; x++)
+                    {
+                        for (int y = 0; y < height; y++)
+                        {
+                            if (y < whereFold)
+                            {
+                                foldedBoard[x, y] = board[x, y];
+                            }
+                            else if (y > whereFold && board[x, y])
+                            {
+                                int d = y - whereFold;
+                                foldedBoard[x, y - 2 * d] = true;
+                            }
+                        }
+                    }
                 }
+
+                board = foldedBoard;
+            }
+
+            public int HowManyDots()
+            {
+                var count = 0;
+                foreach (var p in board)
+                {
+                    if(p) count++;
+                }
+                return count;
             }
 
         }
 
         public override void PrintOutput()
         {
-            ReadData(data, out var points, out var folds);
-            var board = new BoardToFold(points);
-            board.DrawBoard();
-            //Console.WriteLine($"Day 12 - part 1: {}");
-            //Console.WriteLine($"Day 12 - part 2: {}");
+
+            ReadData(Properties.Resources.DataDay13, out var points, out var folds);
+            var boardToFold = new BoardToFold(points);
+
+            boardToFold.Fold(folds[0].xFold, folds[0].whereFold);
+
+            Console.WriteLine($"Day 13 - part 1: {boardToFold.HowManyDots()}");
+
+            for (int i = 1; i < folds.Count; i++)
+            {
+                var xFold = folds[i].xFold;
+                var whereFold = folds[i].whereFold;
+
+                if (boardToFold.width < 100 && boardToFold.height < 100)
+                {
+                    var text = xFold ? "Fold X = " : "Fold Y = ";
+                    Console.WriteLine(text + whereFold);
+                    boardToFold.DrawBoard(true, xFold, whereFold);
+                }
+                boardToFold.Fold(xFold, whereFold);
+            }
+
+            boardToFold.DrawBoard(false, true, 0);
         }
 
-        public void ReadData(string source, out List<(int x, int y)> points, out List<(bool xFold, int value)> folds)
+        public void ReadData(string source, out List<(int x, int y)> points, out List<(bool xFold, int whereFold)> folds)
         {
             points = new List<(int x, int y)>();
             folds = new List<(bool xFold, int value)>();
@@ -102,7 +159,7 @@ fold along x=5";
                 {
                     addingPoints = false;
                 }
-                    else if(addingPoints)
+                else if(addingPoints)
                 {
                     var divided = t.Split(',');
                     points.Add((int.Parse(divided[0]), int.Parse(divided[1])));
